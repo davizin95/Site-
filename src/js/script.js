@@ -1,5 +1,4 @@
-
-const botoes = document.querySelectorAll('.botoes');
+const botoes = document.querySelectorAll('.botoes button');
 const personagens = document.querySelectorAll(".personagem");
 
 botoes.forEach((botao, indice) => {
@@ -8,17 +7,20 @@ botoes.forEach((botao, indice) => {
         desselecionarPersonagem();
 
         botao.classList.add("selecionado");
-        personagens[indice].classList.add("selecionado")
+        personagens[indice].classList.add("selecionado");
     });
-})
+});
 
 function desselecionarPersonagem() {
     personagens.forEach(personagem => {
         personagem.classList.remove("selecionado");
     });
 }
+
 function desselecionarBotao() {
     botoes.forEach(botao => {
         botao.classList.remove("selecionado");
     });
 }
+
+
